@@ -1,12 +1,3 @@
-/*
- * Be sure to fill in the variable
- * This file is intended to load the variable from variables.tf file
-*/
-
-/*
- * Specify the provider
-*/
-
 provider "aws" {
   region                      = "${var.aws_region}"
   access_id                   = ""
@@ -28,7 +19,6 @@ resource aws_instance "${var.instance_name}" {
   }
   tags {
     Name                      = "${var.tag_name}"
-    Type                      = "${var.tag_type}"
     Environment               = "${var.tag_env}"
   }
 }
