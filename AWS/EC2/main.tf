@@ -1,10 +1,10 @@
 provider "aws" {
   region                      = "${var.aws_region}"
-  access_id                   = "${var.aws_access_key}"
+  access_key                   = "${var.aws_access_key}"
   secret_key                  = "${var.aws_secret_key}"
 }
 
-resource aws_instance "${var.instance_name}" {
+resource "aws_instance" "test" {
   ami                         = "${var.aws_amis}"
   instance_type               = "${var.instance_type}"
   key_name                    = "${var.key_name}"

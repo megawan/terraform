@@ -2,28 +2,23 @@
 
 variable "aws_region" {
   description = "AWS Region"
-  default = " us-east-1"
+  default = "us-east-1"
 }
 
-variable "aws_access_key" {
 
+variable "aws_access_key" {
+  
 }
 
 variable "aws_secret_key" {
-
+  
 }
 
-variable "instance_name" {
+variable "aws_amis" {
   description = ""
-  default     = ""
+  default = "ami-97785bed"
+  type = "string"
 }
-
-/* variable "aws_amis" {
- * description = ""
- * default = ""
- * type = "string"
-}
-*/
 
 variable "instance_type" {
   description = ""
@@ -32,7 +27,7 @@ variable "instance_type" {
 
 variable "key_name" {
   description = ""
-  default = ""
+  default = "sysadmin"
 }
 
 variable "public_ip" {
@@ -47,7 +42,7 @@ variable "subnet_id" {
 
 variable "security_group_id" {
   description = ""
-  default = [ "sg-774a6810" ]
+  default = [ "sg-38045071" ]
   type = "list"
 }
 
@@ -63,10 +58,10 @@ variable "root_block_device_vol_type" {
 
 variable "tag_name" {
   description = ""
-  default = ""
+  default = "gika-01.spaceman.id"
 }
 
 variable "tag_env" {
   description = ""
-  default = ""
+  default = "development"
 }
